@@ -1,0 +1,256 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: url('organic-tiles.png');
+}
+
+.container {
+    min-height: 100vh;
+    position: relative;
+    background: #f6f6f6;
+    overflow: hidden;
+    border: 1px solid gray;
+}
+
+.todo-header {
+    padding: 20px 0;
+}
+
+h2 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    margin: 0;
+}
+
+header,
+form,
+section {
+    width: 100%;
+}
+
+.todo-header {
+    background: #0091df;
+
+}
+
+.todo-header div {
+    text-align: center;
+    color: white;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 5px;
+    border-bottom: 1px solid gray;
+    background: #fff;
+}
+
+.form .todo-form-textarea,
+.search-input {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 70%;
+    outline: none;
+    border: 1px solid gray;
+}
+
+.add-to-list {
+    font-size: 20px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 10%;
+}
+
+.todo-form-label {
+    padding: 5px 20px;
+}
+
+.form label {
+    width: 100%;
+    display: block;
+}
+
+.task-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #f6f6f6;
+    align-items: center;
+}
+
+.content-task {
+    width: 90%;
+    display: flex;
+    align-items: center;
+
+}
+
+.content-task span {
+    width: 70%;
+    word-wrap: break-word
+}
+
+.task-add-date {
+    display: none;
+}
+
+.delete-btn {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    font-size: 16px;
+}
+
+.todo-body {
+    background: #f6f6f6;
+}
+
+.checked span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+input[type=checkbox] {
+    display: block;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]+label::before {
+    content: '\2714';
+    text-decoration: none !important;
+    border: 1px solid #0091df;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-left: 10px;
+    text-align: center;
+    color: transparent;
+    font-size: 20px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked+label::before {
+    color: white;
+    text-decoration: none;
+    background: #0091df;
+    border: 1px solid transparent;
+}
+
+.search {
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #0091df;
+    color: white;
+}
+
+.search label {
+    display: block;
+    padding-left: 20px;
+}
+
+.task-wrap:nth-child(2n) {
+    background: white;
+
+}
+
+.task-wrap:nth-child(2n-1) {
+    background: #f6f6f6;
+}
+
+@media (max-width: 443px) {
+    .content-task {
+        width: 80%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .content-task span {
+        width: 60%;
+    }
+}
+
+@media (min-width: 810px) {
+    .container {
+        width: 800px;
+        margin: 50px auto;
+        min-height: 500px;
+
+    }
+
+    h2 {
+
+        padding-left: 20px;
+        padding-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .todo-header {
+        padding: 20px 0;
+    }
+
+    .form {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 0 30px 20px;
+        border-bottom: 1px solid gray;
+        background: #fff;
+    }
+
+    .form .todo-form-textarea,
+    .search-input {
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        width: 300px;
+        outline: none;
+        border: 1px solid gray;
+    }
+
+    .add-to-list {
+        width: 50px;
+    }
+
+    .content-task {
+        width: 80%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .task-add-date {
+        width: 10%;
+        display: block;
+    }
+}
